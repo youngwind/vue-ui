@@ -1,10 +1,18 @@
-<div class="v-select-wrapper">
-    <h1 v-touch:tap="open">请选择</h1>
+<div class="v-select-wrapper" v-touch:tap="open">
+    <span v-if="selected">{{selectedOption}}</span>
+    <span v-else>请选择</span>
+    <i class="fa fa-angle-down"></i>
 </div>
 <div :class="contentClass">
-    <ul>
-        <li>1</li>
-        <li>2</li>
+    <div class="v-select-title">
+        <span v-touch:tap="close">确定</span>
+    </div>
+    <ul class="v-select-options-wrapper">
+        <li v-for="option in options" v-touch:tap="selectOption(option.id)">
+            <span>{{option.name}}</span>
+            <i class="fa fa-check" v-if="selected === option.id"></i>
+            <i class="fa" v-else></i>
+        </li>
     </ul>
 </div>
 <v-shade :display.sync="display"></v-shade>
