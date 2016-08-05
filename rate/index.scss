@@ -4,4 +4,7 @@
 .v-rate-wrapper {
     @include font-dpr(20px);
     color: $icon-basic-color;
+    i.fa {
+        margin-right: 0.1rem;
+    }
 }
