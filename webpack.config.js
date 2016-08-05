@@ -4,10 +4,13 @@
 
 module.exports = {
     watch: true,
-    entry: './index.js',
+    entry:{
+        index:['./index.js'],
+        example:['./example/example.js']
+    },
     output: {
         path: __dirname + '/dist',
-        filename: "index.js"
+        filename: "[name].js"
     },
     module: {
         loaders: [
@@ -21,7 +24,7 @@ module.exports = {
             }
         ]
     },
-    externals: {
-        "vue": 'Vue'
-    }
+    // externals: {
+    //     "vue": 'Vue'
+    // }
 };

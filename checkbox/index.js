@@ -20,4 +20,4 @@ var vCheckbox = Vue.extend({
     }
 });
 
-Vue.component('v-checkbox', vCheckbox);
+module.exports = vCheckbox;

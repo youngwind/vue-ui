@@ -4,7 +4,7 @@ Vue.use(VueTouch);
 
 require('./index.scss');
 
-var vNumber = Vue.extend({
+var vSelect = Vue.extend({
     template: require('./index.html'),
     props: {
 
@@ -32,14 +32,15 @@ var vNumber = Vue.extend({
             default: 'star',
             coerce: function (type) {
 
-                var otherTypeList = ['star', 'heart'];
+                var otherTypeList = ['heart'];
 
-                if (otherTypeList.indexOf(type) !== -1) {
-                    return type;
-                } else {
+                if (otherTypeList.indexOf(type) === -1) {
                     console.warn('warning from rate组件: 请注意,此icon类型:' + type + '暂不支持');
-                    return 'star';
+                    return 'star'
+                } else {
+                    return type;
                 }
+
             }
         }
 
@@ -65,5 +66,4 @@ var vNumber = Vue.extend({
     }
 });
 
-
-module.exports = vNumber;
+module.exports = vSelect;

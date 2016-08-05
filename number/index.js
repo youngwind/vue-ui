@@ -29,4 +29,4 @@ var vNumber = Vue.extend({
     }
 });
 
-Vue.component('v-number', vNumber);
+module.exports = vNumber;

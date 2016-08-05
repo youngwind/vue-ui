@@ -1,0 +1,10 @@
+@import "../base/mixin";
+@import "../base/variable";
+
+.v-select-wrapper {
+    @include font-dpr(20px);
+    color: $icon-basic-color;
+    i.fa {
+        margin-right: 0.1rem;
+    }
+}
