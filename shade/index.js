@@ -3,11 +3,10 @@
  * 全局半透明黑色遮罩
  */
 
-var Vue = require('vue');
+import Vue from 'vue';
+import './index.scss';
 
-require('./index.scss');
-
-var vShade = Vue.extend({
+module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
         display: {
@@ -16,18 +15,17 @@ var vShade = Vue.extend({
         }
     },
     methods: {
-        hide: function () {
+        hide () {
             this.display = false;
         }
     },
     computed: {
-        shadeWrapperClass: function () {
+        shadeWrapperClass () {
             return {
                 'v-shade-wrapper': true,
                 'v-show': this.display
-            }
+            };
         }
     }
 });
 
-module.exports = vShade;

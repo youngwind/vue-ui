@@ -1,29 +1,28 @@
 /**
  * Created by youngwind on 16/8/1.
+ * 加减数字组件
  */
 
-var Vue = require('vue');
+import Vue from 'vue';
+import './index.scss';
 
-require('./index.scss');
-
-var vNumber = Vue.extend({
+module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
         value: 0
     },
     methods: {
-        plus: function () {
+        plus () {
             this.value++;
         },
-        minus: function () {
+        minus () {
             this.value--;
         }
     },
     computed: {
-        hiddenMinus: function () {
-            return this.value <= 0 ? true : false;
+        hiddenMinus () {
+            return this.value <= 0;
         }
     }
 });
 
-module.exports = vNumber;

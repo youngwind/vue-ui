@@ -3,43 +3,41 @@
  * select框
  */
 
-var Vue = require('vue');
-var find = require(('lodash.find'));
+import Vue from 'vue';
+import find from 'lodash.find';
+import vShade from '../shade';
 
-var vShade = require('../shade');
 Vue.component('v-shade', vShade);
-
-
 require('./index.scss');
 
-var vSelect = Vue.extend({
+module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
 
         // 是否显示下拉框
         display: {
             type: [Boolean],
-            default: true
+            default: false
         },
 
         // 下拉选项数组对象
         options: {
             type: Array,
-            default: function () {
+            default () {
                 return [
                     {
                         id: 1,
-                        name: "测试数据1"
+                        name: '测试数据1'
                     },
                     {
                         id: 2,
-                        name: "测试数据测试2"
+                        name: '测试数据测试2'
                     },
                     {
                         id: 3,
-                        name: "测试数据测试长度3"
+                        name: '测试数据测试长度3'
                     }
-                ]
+                ];
             }
         },
 
@@ -51,37 +49,34 @@ var vSelect = Vue.extend({
 
     },
     methods: {
-        open: function () {
+        open () {
             this.display = true;
         },
-        selectOption: function (selectedId) {
-            var that = this;
+        selectOption (selectedId) {
             this.selected = selectedId;
 
             // 此处使用延时是为了让用户感知到自己选中了某项
             // 更好的处理方法是使用动画,而非延时关闭
-            setTimeout(function () {
-                that.close();
-            }, 100)
+            setTimeout(() => {
+                this.close();
+            }, 100);
         },
-        close: function () {
+        close () {
             this.display = false;
         }
     },
     computed: {
-        contentClass: function () {
+        contentClass () {
             return {
                 'v-select-content': true,
                 'v-show': this.display
-            }
+            };
         },
 
-        selectedOption: function () {
+        selectedOption () {
             return find(this.options, {
                 id: this.selected
-            }).name
+            }).name;
         }
     }
 });
-
-module.exports = vSelect;

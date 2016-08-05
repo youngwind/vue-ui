@@ -1,20 +1,20 @@
 /**
  * Created by youngwind on 16/8/2.
+ * 复选框组件
  */
-var Vue = require('vue');
 
-require('./index.scss');
+import Vue from 'vue';
+import './index.scss';
 
-var vCheckbox = Vue.extend({
+module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
         checked: false
     },
     methods: {
-        toggle: function () {
+        toggle () {
             this.checked = !this.checked;
         }
     }
 });
 
-module.exports = vCheckbox;

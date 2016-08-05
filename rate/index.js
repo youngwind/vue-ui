@@ -1,8 +1,11 @@
-var Vue = require('vue');
+/**
+ * 打分组件
+ */
 
-require('./index.scss');
+import Vue from 'vue';
+import './index.scss';
 
-var vNumber = Vue.extend({
+module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
 
@@ -10,7 +13,7 @@ var vNumber = Vue.extend({
         max: {
             type: [Number, String],
             default: 5,
-            coerce: function (max) {
+            coerce (max) {
                 return parseInt(max);
             }
         },
@@ -19,8 +22,8 @@ var vNumber = Vue.extend({
         value: {
             type: [Number, String],
             default: 1,
-            coerce: function (value) {
-                return parseInt(value)
+            coerce (value) {
+                return parseInt(value);
             }
         },
 
@@ -29,8 +32,7 @@ var vNumber = Vue.extend({
             type: [String],
             default: 'star',
             coerce: function (type) {
-
-                var otherTypeList = ['star', 'heart'];
+                let otherTypeList = ['star', 'heart'];
 
                 if (otherTypeList.indexOf(type) !== -1) {
                     return type;
@@ -43,12 +45,12 @@ var vNumber = Vue.extend({
 
     },
     methods: {
-        setRate: function (index) {
+        setRate (index) {
             this.value = (index === this.value ? index - 1 : index);
         }
     },
     computed: {
-        items: function () {
+        items () {
             var ary = [];
             for (var i = 0; i < this.max; i++) {
                 var isActive = this.value > i ? 1 : 0;
@@ -56,12 +58,10 @@ var vNumber = Vue.extend({
                     isActive: isActive,
                     className: isActive ? 'fa-' + this.type : 'fa-' + this.type + '-o'
 
-                }
+                };
             }
             return ary;
         }
     }
 });
 
-
-module.exports = vNumber;
