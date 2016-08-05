@@ -1,0 +1,7 @@
+@import "../base/mixin";
+@import "../base/variable";
+
+.v-rate-wrapper {
+    @include font-dpr(20px);
+    color: $icon-basic-color;
+}

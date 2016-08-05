@@ -1,4 +1,5 @@
 module.exports = {
     number: require('./number'),
-    checkbox: require('./checkbox')
+    checkbox: require('./checkbox'),
+    rate:require('./rate')
 };
