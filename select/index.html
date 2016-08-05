@@ -1,6 +1,10 @@
 <div class="v-select-wrapper">
-    <template v-for="(index, item) in items">
-        <i class="fa" v-bind:class="item.className"
-           v-touch:tap="setRate(index+1)"></i>
-    </template>
+    <h1 v-touch:tap="open">请选择</h1>
 </div>
+<div :class="contentClass">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+</div>
+<v-shade :display.sync="display"></v-shade>

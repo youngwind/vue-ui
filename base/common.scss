@@ -1,1 +1,9 @@
 @import "./mixin";
+
+.v-hide {
+    display: none;
+}
+
+.v-show {
+    display: block !important;
+}

@@ -1,17 +1,13 @@
 /**
  * Created by youngwind on 16/8/5.
- * select框
+ * 全局半透明黑色遮罩
  */
 
 var Vue = require('vue');
 
-
-var vShade = require('../shade');
-Vue.component('v-shade', vShade);
-
 require('./index.scss');
 
-var vSelect = Vue.extend({
+var vShade = Vue.extend({
     template: require('./index.html'),
     props: {
         display: {
@@ -20,19 +16,18 @@ var vSelect = Vue.extend({
         }
     },
     methods: {
-        open: function () {
-            this.display = true;
-            console.log(this.display);
+        hide: function () {
+            this.display = false;
         }
     },
     computed: {
-        contentClass: function () {
+        shadeWrapperClass: function () {
             return {
-                'content': true,
+                'v-shade-wrapper': true,
                 'v-show': this.display
             }
         }
     }
 });
 
-module.exports = vSelect;
+module.exports = vShade;

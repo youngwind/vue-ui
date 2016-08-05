@@ -2,9 +2,15 @@
 @import "../base/variable";
 
 .v-select-wrapper {
-    @include font-dpr(20px);
-    color: $icon-basic-color;
-    i.fa {
-        margin-right: 0.1rem;
-    }
+}
+
+.content {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width:100%;
+    height: 100px;
+    background-color: #fff;
 }

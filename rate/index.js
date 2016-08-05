@@ -1,6 +1,4 @@
 var Vue = require('vue');
-var VueTouch = require('vue-touch');
-Vue.use(VueTouch);
 
 require('./index.scss');
 
