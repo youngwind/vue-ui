@@ -1,0 +1,41 @@
+{
+  "name": "vue-ui",
+  "version": "1.0.0",
+  "description": "移动端web ui组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuexx/vue-ui.git"
+  },
+  "author": "youngwind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuexx/vue-ui/issues"
+  },
+  "homepage": "https://github.com/vuexx/vue-ui#readme",
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-runtime": "^6.11.6",
+    "css-loader": "^0.23.1",
+    "font-awesome": "^4.6.3",
+    "node-sass": "^3.8.0",
+    "normalize.css": "^4.2.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "vue": "^1.0.26",
+    "vue-hot-reload-api": "^2.0.5",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.3",
+    "vue-style-loader": "^1.0.0",
+    "vue-touch": "^1.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

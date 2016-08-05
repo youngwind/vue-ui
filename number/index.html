@@ -1,0 +1,5 @@
+<div class="number-container">
+    <i class="fa fa-plus-square" aria-hidden="true" v-touch:tap="plus"></i>
+    <span>{{ value }}</span>
+    <i class="fa fa-minus-square" aria-hidden="true" v-touch:tap="minus" v-bind:class="{'hidden':hiddenMinus}"></i>
+</div>

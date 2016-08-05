@@ -1,0 +1,38 @@
+/**
+ * Created by youngwind on 16/8/1.
+ */
+@import "../base/mixin";
+@import "../base/variable";
+
+.number-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 2rem;
+    text-align: center;
+    @include font-dpr(20px);
+
+    .fa-plus-square {
+        order: 3;
+        flex: 1;
+    }
+
+    .fa-minus-square {
+        order: 1;
+        flex: 1;
+    }
+
+    span {
+        order: 2;
+        flex: 1;
+    }
+
+    .fa-plus-square,
+    .fa-minus-square {
+        color: $icon-basic-color;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<link rel="stylesheet" href="./font-awesome.css">
+<script src="./flexible.debug.js"></script>
+<body>
+<div id="app">
+    <v-number v-bind:value="number"></v-number>
+    <v-checkbox></v-checkbox>
+</div>
+<script src="./vue.js"></script>
+<script src="../dist/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            number: 1
+        }
+    });
+
+</script>
+</body>
+</html>
