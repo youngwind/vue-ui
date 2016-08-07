@@ -1,0 +1,23 @@
+<div class="v-scroll-picker" v-touch:tap="show">
+    <span v-if="selectedId">{{selectedOption.name}}</span>
+    <span v-else>请选择</span>
+    <i class="fa fa-angle-down"></i>
+</div>
+<div class="v-scroll-picker-wrapper" :class="{'v-show': display}">
+    <div class="v-scroll-picker-title">
+        <span v-touch:tap="hide">取消</span>
+        <span v-touch:tap="select">确定</span>
+    </div>
+    <div class="v-scroll-picker-content">
+        <ul>
+            <li v-for="option in options">
+                <span>{{ option.name }}</span>
+            </li>
+
+        </ul>
+        <div class="v-scroll-pinker-mask"></div>
+        <div class="v-scroll-indicator"></div>
+    </div>
+
+</div>
+<v-shade :display.sync="display"></v-shade>

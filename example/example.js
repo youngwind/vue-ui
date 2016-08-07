@@ -3,12 +3,13 @@
  */
 
 import Vue from 'vue';
-import {number, checkbox, rate, shade, select} from '../index';
+import {number, checkbox, rate, shade, select, scrollPicker} from '../index';
 Vue.component('v-number', number);
 Vue.component('v-checkbox', checkbox);
 Vue.component('v-rate', rate);
 Vue.component('v-shade', shade);
 Vue.component('v-select', select);
+Vue.component('v-scroll-picker', scrollPicker);
 
 new Vue({
     el: '#app',

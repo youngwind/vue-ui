@@ -3,6 +3,7 @@
  */
 
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     watch: true,
@@ -34,11 +35,11 @@ module.exports = {
             },
             {
                 test: /\.scss/,
-                loader: "style-loader!css-loader!sass-loader"
+                loader: "style-loader!css-loader!postcss-loader!sass-loader"
             },
             {
                 test: /\.css/,
-                loader: "style-loader!css-loader"
+                loader: "style-loader!css-loader!postcss-loader"
             },
             {
                 test: /\.(ttf|eot|svg|woff|woff2)/,
@@ -50,5 +51,9 @@ module.exports = {
         new CopyWebpackPlugin([
             {from: './example/example.html'}
         ], {})
+    ],
+    postcss: [
+        autoprefixer()
     ]
+
 };
