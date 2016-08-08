@@ -58,6 +58,22 @@ new Vue({
             }
         ],
         selectedId: 4
+    },
+    methods: {
+        toast () {
+            this.$vux.toast.show({
+
+                text: 'Hello World',
+                time: 1500,
+                onShow () {
+                    console.log('toast show');
+                },
+                onHide () {
+                    console.log('toast hide');
+                }
+            });
+        }
+
     }
 });
 

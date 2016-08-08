@@ -16,6 +16,9 @@ import 'font-awesome/css/font-awesome.css';
 // 淘宝flexible适配
 import 'lib-flexible';
 
+import ToastPlugin from './plugins/toast';
+Vue.use(ToastPlugin);
+
 module.exports = {
     number: require('./number'),
     checkbox: require('./checkbox'),
