@@ -12,6 +12,11 @@
     <v-select :options="selectOptions" :selected.sync="selectedId"></v-select>
     <v-scroll-picker></v-scroll-picker>
     <h1 v-touch:tap="toast">点我Toast</h1>
+    <v-group title="个人信息">
+        <v-cell title="姓名:" value="梁少峰" is-link></v-cell>
+        <v-cell title="年龄:" value="24" is-link></v-cell>
+        <v-cell title="性别" value="男"></v-cell>
+    </v-group>
 </div>
 <script src="../dist/example.js"></script>
 </body>

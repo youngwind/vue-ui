@@ -1,0 +1,33 @@
+@import "../base/variable";
+
+.v-cell-wrapper {
+    display: flex;
+    height: 1rem;
+    align-items: center;
+    margin: 0.1rem 0.2rem;
+    border-bottom: 1px solid $basic-border-color;
+    .v-cell-header {
+        flex: 1;
+    }
+
+    .v-cell-body {
+        flex: 2;
+    }
+
+    .v-cell-footer {
+        display:flex;
+        flex: 1;
+        text-align: center;
+
+        span {
+            flex: 2;
+        }
+        i {
+            flex: 1;
+        }
+    }
+}
+
+.v-cell-wrapper:last-of-type {
+    border-bottom: none;
+}

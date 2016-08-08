@@ -1,0 +1,18 @@
+@import "../base/variable";
+
+.v-group-wrapper {
+
+    .v-group-title {
+
+        display: flex;
+        align-items: center;
+        height: 1rem;
+        padding: 0 0.2rem;
+    }
+    .v-group-content {
+        border-top: 1px solid $basic-border-color;
+        border-bottom: 1px solid $basic-border-color;
+        background-color: #fff;
+    }
+
+}

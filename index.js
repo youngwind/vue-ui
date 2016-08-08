@@ -25,6 +25,8 @@ module.exports = {
     rate: require('./rate'),
     shade: require('./shade'),
     select: require('./select'),
-    scrollPicker: require('./scroll_picker')
+    scrollPicker: require('./scroll_picker'),
+    group: require('./group'),
+    cell: require('./cell')
 };
 
