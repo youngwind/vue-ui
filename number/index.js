@@ -9,7 +9,14 @@ import './index.scss';
 module.exports = Vue.extend({
     template: require('./index.html'),
     props: {
-        value: 0
+        name: {
+            type: String,
+            default: 'name'
+        },
+        value: {
+            type: [String, Number],
+            default: 0
+        }
     },
     methods: {
         plus () {

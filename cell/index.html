@@ -3,10 +3,6 @@
         <span>{{title}}</span>
     </div>
     <div class="v-cell-body">
-    </div>
-    <div class="v-cell-footer">
-        <span>{{value}}</span>
-        <i class="fa fa-angle-right" v-if="!!isLink"></i>
-        <i class="fa" v-else></i>
+        <slot></slot>
     </div>
 </div>

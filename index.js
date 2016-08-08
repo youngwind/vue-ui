@@ -27,6 +27,7 @@ module.exports = {
     select: require('./select'),
     scrollPicker: require('./scroll_picker'),
     group: require('./group'),
-    cell: require('./cell')
+    cell: require('./cell'),
+    fNumber:require('./form/f-number')
 };
 

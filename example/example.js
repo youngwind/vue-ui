@@ -3,7 +3,7 @@
  */
 
 import Vue from 'vue';
-import {number, checkbox, rate, shade, select, scrollPicker, group, cell} from '../index';
+import {number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber} from '../index';
 Vue.component('v-number', number);
 Vue.component('v-checkbox', checkbox);
 Vue.component('v-rate', rate);
@@ -12,6 +12,7 @@ Vue.component('v-select', select);
 Vue.component('v-scroll-picker', scrollPicker);
 Vue.component('v-group', group);
 Vue.component('v-cell', cell);
+Vue.component('v-f-number', fNumber);
 
 new Vue({
     el: '#app',
