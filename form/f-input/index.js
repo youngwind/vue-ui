@@ -24,6 +24,10 @@ module.exports = Vue.extend({
         value: {
             type: [String, Number],
             default: '梁少峰'
+        },
+        placeholder: {
+            type: [String],
+            default: '提示文字'
         }
     }
 });

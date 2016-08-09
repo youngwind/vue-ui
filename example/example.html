@@ -10,7 +10,7 @@
     <v-rate></v-rate>
     <h1 v-touch:tap="toast">点我Toast</h1>
     <v-group title="个人信息">
-        <v-f-input title="姓名" name="name" :value.sync="name" placeholder="请输入你的姓名"></v-f-input>
+        <v-f-input title="姓名" name="name" :value.sync="name" placeholder="请输入姓名"></v-f-input>
         <v-f-number title="工作年限" :value.sync="number" name="age"></v-f-number>
         <v-f-one-scroll-picker title="年龄" :options="selectOptions" :selected-id.sync="selectedId"></v-f-one-scroll-picker>
         <v-cell title="性别" value="男"></v-cell>
