@@ -28,6 +28,8 @@ module.exports = {
     scrollPicker: require('./scroll_picker'),
     group: require('./group'),
     cell: require('./cell'),
-    fNumber:require('./form/f-number')
+    fNumber: require('./form/f-number'),
+    input: require('./input'),
+    fInput: require('./form/f-input')
 };
 

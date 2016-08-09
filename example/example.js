@@ -3,7 +3,11 @@
  */
 
 import Vue from 'vue';
-import {number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber} from '../index';
+import {
+    number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber,
+    input, fInput
+} from '../index';
+
 Vue.component('v-number', number);
 Vue.component('v-checkbox', checkbox);
 Vue.component('v-rate', rate);
@@ -13,10 +17,13 @@ Vue.component('v-scroll-picker', scrollPicker);
 Vue.component('v-group', group);
 Vue.component('v-cell', cell);
 Vue.component('v-f-number', fNumber);
+Vue.component('v-input', input);
+Vue.component('v-f-input', fInput);
 
 new Vue({
     el: '#app',
     data: {
+        name: '梁少峰',
         number: 1,
         selectOptions: [
             {

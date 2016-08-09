@@ -1,0 +1,16 @@
+@import "../base/mixin";
+@import "../base/variable";
+
+.v-input-wrapper {
+    width: 100%;
+
+    .v-input {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        background-color: transparent;
+        font-size: inherit;
+    }
+}
