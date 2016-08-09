@@ -1,0 +1,10 @@
+@import "../../base/mixin";
+
+
+.v-cell-wrapper {
+
+    .number-container {
+        @include font-dpr(16px);
+    }
+
+}

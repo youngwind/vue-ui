@@ -5,7 +5,7 @@
 import Vue from 'vue';
 import {
     number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber,
-    input, fInput
+    input, fInput, fOneScrollPicker
 } from '../index';
 
 Vue.component('v-number', number);
@@ -19,55 +19,23 @@ Vue.component('v-cell', cell);
 Vue.component('v-f-number', fNumber);
 Vue.component('v-input', input);
 Vue.component('v-f-input', fInput);
+Vue.component('v-f-one-scroll-picker', fOneScrollPicker);
+
+let ageOptions = [];
+for (let i = 1; i < 100; i++) {
+    ageOptions.push({
+        id: i,
+        name: i
+    });
+}
 
 new Vue({
     el: '#app',
     data: {
         name: '梁少峰',
         number: 1,
-        selectOptions: [
-            {
-                id: 1,
-                name: '测试数据1'
-            },
-            {
-                id: 2,
-                name: '测试数据测试2'
-            },
-            {
-                id: 3,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 4,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 5,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 6,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 7,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 8,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 9,
-                name: '测试数据测试长度3'
-            },
-            {
-                id: 10,
-                name: '测试数据测试长度3'
-            }
-        ],
-        selectedId: 4
+        selectOptions: ageOptions,
+        selectedId: 20
     },
     methods: {
         toast () {

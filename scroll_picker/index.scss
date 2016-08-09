@@ -2,7 +2,7 @@
 @import "../base/variable";
 
 .v-scroll-picker {
-    @include font-dpr(20px);
+    font-size: inherit;
 }
 
 .v-scroll-picker-wrapper {

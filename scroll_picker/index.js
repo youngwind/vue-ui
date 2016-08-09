@@ -21,38 +21,27 @@ module.exports = Vue.extend({
             type: Array,
             default () {
                 let ary = [];
-                ary.push({
-                    id: null,
-                    name: ''
-                });
-                ary.push({
-                    id: null,
-                    name: ''
-                });
-                ary.push({
-                    id: null,
-                    name: ''
-                });
                 for (let i = 0; i < 100; i++) {
                     ary.push({
                         id: i + 1,
                         name: `测试数据${i}`
                     });
                 }
-                ary.push({
-                    id: null,
-                    name: ''
-                });
-                ary.push({
-                    id: null,
-                    name: ''
-                });
-                ary.push({
-                    id: null,
-                    name: ''
-                });
                 return ary;
+            },
+            coerce (options) {
+                options = JSON.parse(JSON.stringify(options));
+                for (let i = 0; i < 3; i++) {
+                    let placeAry = {
+                        id: null,
+                        name: ''
+                    };
+                    options.unshift(placeAry);
+                    options.push(placeAry);
+                }
+                return options;
             }
+
         },
         // 选中option的id
         selectedId: {

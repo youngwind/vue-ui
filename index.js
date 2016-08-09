@@ -30,6 +30,7 @@ module.exports = {
     cell: require('./cell'),
     fNumber: require('./form/f-number'),
     input: require('./input'),
-    fInput: require('./form/f-input')
+    fInput: require('./form/f-input'),
+    fOneScrollPicker: require('./form/f-one-scroll-picker')
 };
 

@@ -10,7 +10,7 @@
     </div>
     <div class="v-scroll-picker-content">
         <ul>
-            <li v-for="option in options">
+            <li v-for="option in options" track-by="$index">
                 <span>{{ option.name }}</span>
             </li>
 
