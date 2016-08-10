@@ -18,24 +18,24 @@ module.exports = Vue.extend({
             default: 'country'
         },
         value: {
-            type: [String, Number],
-            default: 'China'
+            type: Array,
+            default: ['nodejs,js']
         },
         options: {
             type: Array,
             default () {
                 return [
                     {
-                        value: 'China',
-                        name: '中国'
+                        value: 'nodejs',
+                        name: 'nodejs'
                     },
                     {
-                        value: 'USA',
-                        name: '美国'
+                        value: 'css',
+                        name: 'css'
                     },
                     {
-                        value: 'Japan',
-                        name: '日本'
+                        value: 'js',
+                        name: 'js'
                     }
                 ];
             }
@@ -43,7 +43,12 @@ module.exports = Vue.extend({
     },
     methods: {
         select (val) {
-            this.value = val;
+            let index = this.value.indexOf(val);
+            if (index === -1) {
+                this.value.push(val);
+            } else {
+                this.value.splice(index, 1);
+            }
         }
     }
 });

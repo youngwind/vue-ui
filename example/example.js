@@ -6,7 +6,7 @@ import Vue from 'vue';
 import './example.scss';
 import {
     number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber,
-    input, fInput, fOneScrollPicker, fRadio
+    input, fInput, fOneScrollPicker, fRadio, fCheckBox
 } from '../index';
 
 Vue.component('v-number', number);
@@ -22,6 +22,7 @@ Vue.component('v-input', input);
 Vue.component('v-f-input', fInput);
 Vue.component('v-f-one-scroll-picker', fOneScrollPicker);
 Vue.component('v-f-radio', fRadio);
+Vue.component('v-f-checkbox', fCheckBox);
 
 let ageOptions = [];
 for (let i = 1; i < 100; i++) {
@@ -53,6 +54,28 @@ new Vue({
                 {
                     name: '加拿大',
                     value: 'Canada'
+                }
+            ]
+        },
+        checkbox: {
+            name: 'skill',
+            value: ['nodejs', 'css'],
+            options: [
+                {
+                    value: 'nodejs',
+                    name: 'nodejs'
+                },
+                {
+                    value: 'css',
+                    name: 'css'
+                },
+                {
+                    value: 'js',
+                    name: 'js'
+                },
+                {
+                    value: 'react',
+                    name: 'react'
                 }
             ]
         }

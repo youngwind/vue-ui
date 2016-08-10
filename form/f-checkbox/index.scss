@@ -1,0 +1,11 @@
+@import "../../base/variable";
+@import "../../base/mixin";
+
+.v-cell-wrapper {
+    .v-checkbox-wrapper {
+        i {
+            color: $icon-basic-color;
+            font-size: inherit;
+        }
+    }
+}
