@@ -1,0 +1,25 @@
+@import "../base/mixin";
+@import "../base/variable";
+
+.v-button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem 0;
+
+    .v-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9rem;
+        height: 1rem;
+        background-color: $icon-basic-color;
+        color: #fff;
+        border-radius: 0.2rem;
+
+        @include font-dpr(20px);
+
+        .v-button-text {
+
+        }
+    }
+}

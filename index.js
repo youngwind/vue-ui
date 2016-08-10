@@ -33,6 +33,7 @@ module.exports = {
     fInput: require('./form/f-input'),
     fOneScrollPicker: require('./form/f-one-scroll-picker'),
     fRadio: require('./form/f-radio'),
-    fCheckBox: require('./form/f-checkbox')
+    fCheckBox: require('./form/f-checkbox'),
+    button: require('./button')
 };
 

@@ -1,4 +1,5 @@
 @import "../base/variable";
+@import "../base/mixin";
 
 .v-group-wrapper {
 
@@ -9,11 +10,13 @@
         height: 1rem;
         padding: 0 0.2rem;
         margin-top: 0.2rem;
+        @include font-dpr(18px);
     }
     .v-group-content {
         border-top: 1px solid $basic-border-color;
         border-bottom: 1px solid $basic-border-color;
         background-color: #fff;
+        @include font-dpr(16px)
     }
 
 }

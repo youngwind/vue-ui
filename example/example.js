@@ -6,7 +6,7 @@ import Vue from 'vue';
 import './example.scss';
 import {
     number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber,
-    input, fInput, fOneScrollPicker, fRadio, fCheckBox
+    input, fInput, fOneScrollPicker, fRadio, fCheckBox, button
 } from '../index';
 
 Vue.component('v-number', number);
@@ -23,6 +23,7 @@ Vue.component('v-f-input', fInput);
 Vue.component('v-f-one-scroll-picker', fOneScrollPicker);
 Vue.component('v-f-radio', fRadio);
 Vue.component('v-f-checkbox', fCheckBox);
+Vue.component('v-button', button);
 
 let ageOptions = [];
 for (let i = 1; i < 100; i++) {
