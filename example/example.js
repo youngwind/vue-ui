@@ -3,9 +3,10 @@
  */
 
 import Vue from 'vue';
+import './example.scss';
 import {
     number, checkbox, rate, shade, select, scrollPicker, group, cell, fNumber,
-    input, fInput, fOneScrollPicker
+    input, fInput, fOneScrollPicker, fRadio
 } from '../index';
 
 Vue.component('v-number', number);
@@ -20,6 +21,7 @@ Vue.component('v-f-number', fNumber);
 Vue.component('v-input', input);
 Vue.component('v-f-input', fInput);
 Vue.component('v-f-one-scroll-picker', fOneScrollPicker);
+Vue.component('v-f-radio', fRadio);
 
 let ageOptions = [];
 for (let i = 1; i < 100; i++) {
@@ -35,7 +37,26 @@ new Vue({
         name: '梁少峰',
         number: 1,
         selectOptions: ageOptions,
-        selectedId: 20
+        selectedId: 20,
+        radio: {
+            name: 'country',
+            value: 'China',
+            options: [
+                {
+                    name: '中国',
+                    value: 'China'
+                },
+                {
+                    name: '美国',
+                    value: 'USA'
+                },
+                {
+                    name: '加拿大',
+                    value: 'Canada'
+                }
+            ]
+        }
+
     },
     methods: {
         toast () {

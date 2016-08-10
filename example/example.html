@@ -6,7 +6,6 @@
 </head>
 <body>
 <div id="app">
-    <v-checkbox></v-checkbox>
     <v-rate></v-rate>
     <h1 v-touch:tap="toast">点我Toast</h1>
     <v-group title="个人信息">
@@ -15,6 +14,9 @@
         <v-f-one-scroll-picker title="年龄" :options="selectOptions" :selected-id.sync="selectedId"></v-f-one-scroll-picker>
         <v-cell title="性别" value="男"></v-cell>
 
+    </v-group>
+    <v-group title="所属国家">
+        <v-f-radio :name="radio.name" :value.sync="radio.value" :options="radio.options"></v-f-radio>
     </v-group>
 
 

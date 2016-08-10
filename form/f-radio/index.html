@@ -1,0 +1,12 @@
+<v-cell v-for="option in options" :title="option.name" v-touch:tap="select(option.value)">
+    <div class="v-radio-wrapper">
+        <template v-if="option.value === value">
+            <input type="radio" :name="name" checked class="v-radio" hidden/>
+            <i class="fa fa-check"></i>
+        </template>
+        <template v-if="option.value !== value">
+            <input type="radio" :name="name" class="v-radio" hidden/>
+            <i class="fa"></i>
+        </template>
+    </div>
+</v-cell>

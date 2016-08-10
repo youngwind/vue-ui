@@ -1,0 +1,17 @@
+@import "../../base/mixin";
+@import "../../base/variable";
+
+.v-cell-wrapper {
+
+    .v-radio-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+
+        i {
+            color: $icon-basic-color;
+        }
+    }
+
+}
