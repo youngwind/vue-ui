@@ -21,7 +21,6 @@ Vue.use(ToastPlugin);
 
 module.exports = {
     number: require('./number'),
-    checkbox: require('./checkbox'),
     rate: require('./rate'),
     shade: require('./shade'),
     select: require('./select'),
