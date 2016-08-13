@@ -7,7 +7,7 @@
 ```
 npm install  browser-sync -g    //hot-reload
 npm install
-webpack
+npm run build
 npm run watch
 ```
-然后访问 http://localhost:3000/dist/example.html
+然后访问 [http://localhost:3000/dist/example.html](http://localhost:3000/dist/example.html)

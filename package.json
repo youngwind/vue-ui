@@ -4,6 +4,7 @@
   "description": "移动端web ui组件库",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "watch": "browser-sync start --server --files 'dist/*.*'"
   },
   "repository": {
